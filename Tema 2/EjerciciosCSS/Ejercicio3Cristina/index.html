@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Agrupamiento y anidamiento CSS</title>
+    <meta charset="utf-8">
+    <style>
+        i+b {
+            color: red
+        }
+
+        #prueba {
+            color: blueviolet;
+        }
+
+        .nivel1 {
+            color: green
+        }
+
+        .nivel2 {
+            color: blue
+        }
+
+        ul ul .nivel2 {
+            font-size: x-small;
+        }
+
+        ul ul li {
+            font-size: small;
+            color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        <p><i>Título:</i><b>Anidamiento y agrupamiento</b> de selectores</p>
+    </h1>
+    <ul>
+        <!--La clase id y los atributos que se pongan en ella prevalece ante los atributos que se pongan en el class-->
+        <li id="prueba" class="nivel1">Agrupamiento</li>
+        <li class="nivel2">Anidamiento</li>
+        <ul>
+            <li class="nivel2">Anidamiento de hijos</li>
+            <li class="nivel2">Anidamiento de adyacentes</li>
+            <li>Anidamiento común</li>
+        </ul>
+    </ul>
+</body>
+
+</html>
